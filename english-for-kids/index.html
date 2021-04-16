@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start" id="buttonLogoBar">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+          aria-label="Open navigation menu" id="app-bar">menu</button>
+        <span class="mdc-top-app-bar__title">English For Kids</span>
+      </section>
+      <section>
+        <button class="mdc-button mdc-button--raised button-start-game">
+          <span class="mdc-button__label">Start Game</span>
+        </button>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <div class="mdc-switch" id="for-switch">
+          <div class="mdc-switch__track"></div>
+          <div class="mdc-switch__thumb-underlay">
+            <div class="mdc-switch__thumb"></div>
+            <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" role="switch"
+              aria-checked="false">
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <aside class="mdc-drawer" id="menu">
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a class="mdc-list-item mdc-list-item--activated" href="./index.html" aria-current="page" >
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Main Page</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Action (set A)</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Action (set B)</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Animal (set A)</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Animal (set B)</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Clothes</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Emotions</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Fruits</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Vegetables</span>
+          </a>
+          <a class="mdc-list-item">
+            <span class="mdc-list-item__ripple"></span>
+            <span class="mdc-list-item__text">Statistics</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+  </header>
+  <div class="wrapper">
+    <main>
+    <section>
+        <div class="overlay" id="overlay"></div>
+        <h1 class="page-title"></h1>
+        <div id="forStars"></div>
+        <div id="success">
+          <div id="congrats">You won!</div>
+          <img src="./img/success.jpg" alt="success"></div>
+        <div id="failure">
+          <div id="mistakes"></div>
+          <img src="./img/failure.jpg" alt="">
+        </div>
+    </section>
+    <div class="statistic">
+      <div class="exit"><span class="material-icons">clear</span></div>
+      <div class="statisticButtons">
+      <button class="mdc-button mdc-button--raised reset">
+        <span class="mdc-button__label">Reset</span>
+      </button>
+      <button class="mdc-button mdc-button--raised trainDifWords">
+        <span class="mdc-button__label">Train Difficult Words</span>
+      </button>
+    </div>
+      <table class="table_sort">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Word</th>
+                <th class="material-icons">g_translate</th>
+                <th class="material-icons">fitness_center</th>
+                <th class="material-icons">sports_esports</th>
+                <th class="material-icons">not_interested</th>
+                <th>%</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </div>
+      <div class="main-wrapper">
+      <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card  flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <a class="material-icons mdc-list-item__graphic">autorenew</a>
+        <div class="mdc-card__media-content">
+        </div>
+        <audio class="pronounce" id="0"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="1"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="2"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="3"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="4"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="5"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="6"></audio>
+      </div>
+    </div>
+    <div class="card-wrapper">
+      <div class="mdc-card category-card">
+        <div class="mdc-card flip-card card-back"></div>
+        <a class="link-to-item" href="#"></a>
+        <a class="link-to-category" href="#"></a>
+        <a href="" class="link-to-correct" href="#"></a>
+        <div class="my-card__media mdc-card__media mdc-card__media--16-9"></div>
+        <i class="material-icons mdc-list-item__graphic">autorenew</i>
+        <div class="mdc-card__media-content"></div>
+        <audio class="pronounce" id="7"></audio>
+      </div>
+    </div>
+  </div>
+    </main>
+    <footer>
+    </footer>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
